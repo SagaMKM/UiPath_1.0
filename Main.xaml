@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,3896" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,4217.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
       <x:String>System.Activities</x:String>
@@ -88,7 +88,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="697.6,3831.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="697.6,4152.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_header" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_row" />
@@ -109,13 +109,13 @@
         <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("SourceData\","*.pdf")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="635.2,3106.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[files]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="635.2,3428" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[files]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="PDFfile" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600,2980.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600,3302.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="PdfText" />
               <Variable x:TypeArguments="x:String" Name="CompanyCode" />
@@ -141,8 +141,8 @@
             </Assign>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="537.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;CompanyCode: .&quot;+ CompanyCode + &quot;.&quot;]" />
             <ui:Comment sap:VirtualizedContainerService.HintSize="537.6,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Otsikkotason parsinta&#xA;" />
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CompanyCode]" sap:VirtualizedContainerService.HintSize="537.6,2151.2" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-              <Sequence x:Key="1234567-8" sap:VirtualizedContainerService.HintSize="497.6,1940" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CompanyCode]" sap:VirtualizedContainerService.HintSize="537.6,2472.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Sequence x:Key="1234567-8" sap:VirtualizedContainerService.HintSize="497.6,2261.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="InvoiceDate" />
                   <Variable x:TypeArguments="x:String" Name="InvoiceNumber" />
@@ -151,6 +151,8 @@
                   <Variable x:TypeArguments="x:String" Name="CompanyName" />
                   <Variable x:TypeArguments="x:String" Name="ReferenceNumber" />
                   <Variable x:TypeArguments="x:String" Name="BankAccountNumber" />
+                  <Variable x:TypeArguments="x:String" Name="VatAmount" />
+                  <Variable x:TypeArguments="x:String" Name="TotalAmount" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -198,6 +200,34 @@
 ).Trim]</InArgument>
                   </Assign.Value>
                 </Assign>
+                <Assign sap:VirtualizedContainerService.HintSize="435.2,83.2" sap2010:WorkflowViewState.IdRef="Assign_11">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[VatAmount]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String" xml:space="preserve">[PdfText.Substring(
+		PdfText.IndexOf("Amount excl. VAT")+34,
+		(PdfText.IndexOf("€",(PdfText.IndexOf("Amount excl. VAT")+34)) -
+		(PdfText.IndexOf("Amount excl. VAT")+34)
+		)
+).Trim]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign sap:VirtualizedContainerService.HintSize="435.2,83.2" sap2010:WorkflowViewState.IdRef="Assign_12">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[TotalAmount]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String" xml:space="preserve">[PdfText.Substring(
+		PdfText.IndexOf("Amount excl. VAT")+53,
+		(PdfText.IndexOf("€",(PdfText.IndexOf("Amount excl. VAT")+53)) -
+		(PdfText.IndexOf("Amount excl. VAT")+53)
+		)
+).Trim]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;Total Amount: .&quot;+ TotalAmount + &quot;.&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Warn" Message="[&quot;VAT: .&quot;+ VatAmount + &quot;.&quot;]" />
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;IBAN: .&quot;+ BankAccountNumber + &quot;.&quot;]" />
                 <Assign sap:VirtualizedContainerService.HintSize="435.2,83.2" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
@@ -248,19 +278,8 @@
 ).Trim]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,283.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,204.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn" Message="[&quot;AmountExVAT: .&quot;+ AmountExVAT + &quot;.&quot;]" />
-                    </Sequence>
-                  </ui:CommentOut.Body>
-                </ui:CommentOut>
-                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object () {DueDate,InvoiceNumber,CompanyName ,ReferenceNumber, InvoiceDate, CompanyCode, BankAccountNumber, &#xD;&#xA;Convert.ToDouble(AmountExVAT.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;)), 0, 0}]" DataTable="[dt_header]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="435.2,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;AmountExVAT: .&quot;+ AmountExVAT + &quot;.&quot;]" />
+                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object () {DueDate,InvoiceNumber,CompanyName ,ReferenceNumber, InvoiceDate, CompanyCode, BankAccountNumber, &#xD;&#xA;Convert.ToDouble(AmountExVAT.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;)),&#xD;&#xA;Convert.ToDouble(VatAmount.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;)),&#xD;&#xA;Convert.ToDouble(TotalAmount.Replace(&quot;,&quot;, &quot;.&quot;).Replace(&quot; &quot;, &quot;&quot;))}]" DataTable="[dt_header]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="435.2,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
               </Sequence>
               <Sequence x:Key="1234567-9" sap:VirtualizedContainerService.HintSize="400,280.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
