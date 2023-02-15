@@ -31,7 +31,7 @@ def isReferenceNumberCorrect(referencenumber):
     return false
 
 def isEqual(totalHeaderSum, totalRowSum, maxDifference):
-    if (totalHeaderSum == totalRowSum):
+    if (abs(totalHeaderSum - totalRowSum) < maxDifference):
         return True
     return False
 
