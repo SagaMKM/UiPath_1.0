@@ -15,7 +15,7 @@ ${dbport}    3306
 ${PATH}    C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath/robotframework/UiPathProjekti/
 
 *** Keywords ***
-Check Amounts Fom Invoice
+Check Amounts From Invoice
     [Arguments]     ${totalSumFromHeader}   ${totalSumFromRows}
     ${status}=  Set Variable    ${False}
     ${totalSumFromHeader}=  Convert To Number    ${totalSumFromHeader}
@@ -36,9 +36,9 @@ Check IBAN
 
     ${length}=  Get length  ${iban}
 
-    if  ${length} == 18
+    IF  ${length} == 18
         ${status}=  Set Variable    ${True}
-    end
+    END
 
     [Return]    ${status}
 
@@ -74,18 +74,18 @@ ${rows} Split String
 validointitesti
     ${referenceResult}=     Is Reference Number Correct     893479835
     
-    if  not ${referenceResult}
+    IF  not ${referenceResult}
         Log to console  Viite virhe
-    end
+    END
 
     ${ibanResult}=     Check IBAN     FI23 2333 4334 3431 34
     
-    if  not ${ibanResult}
+    IF  not ${ibanResult}
         Log to console  IBAN virhe
-    end
+    END
 
-    ${sumResult}=     Check Amount From Invoice     2332,22    2332,23
+    ${sumResult}=    Check Amounts From Invoice     2332,22    2332,23
     
-    if  not ${sumResult}
+    IF  not ${sumResult}
         Log to console  Summa virhe
-    end
+    END

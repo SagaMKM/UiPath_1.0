@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20230215 10:41:38.893" rpa="false" schemaversion="3">
+<suite id="s1" name="Tietokanta" source="c:\Users\niemi\Desktop\HAMK\HAMK21_22\Ohjelmointi\webservices\UiPath3\robotframework\UiPathProjekti\tietokanta.robot">
+<test id="s1-t1" name="validointitesti" line="74">
+<kw name="Is Reference Number Correct" library="validointi">
+<var>${referenceResult}</var>
+<arg>893479835</arg>
+<msg timestamp="20230215 10:41:39.021" level="INFO">205</msg>
+<msg timestamp="20230215 10:41:39.021" level="INFO">${referenceResult} = True</msg>
+<status status="PASS" starttime="20230215 10:41:39.021" endtime="20230215 10:41:39.021"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${referenceResult}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Viite virhe</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230215 10:41:39.021" endtime="20230215 10:41:39.030"/>
+</kw>
+<status status="NOT RUN" starttime="20230215 10:41:39.021" endtime="20230215 10:41:39.030"/>
+</branch>
+<status status="PASS" starttime="20230215 10:41:39.021" endtime="20230215 10:41:39.030"/>
+</if>
+<kw name="Check IBAN">
+<var>${ibanResult}</var>
+<arg>FI23 2333 4334 3431 34</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${status}</var>
+<arg>${False}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230215 10:41:39.030" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20230215 10:41:39.030" endtime="20230215 10:41:39.035"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${iban}</var>
+<arg>${iban}</arg>
+<arg>${SPACE}</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20230215 10:41:39.038" level="INFO">${iban} = FI2323334334343134</msg>
+<status status="PASS" starttime="20230215 10:41:39.037" endtime="20230215 10:41:39.038"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${iban}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20230215 10:41:39.038" level="INFO">Length is 18</msg>
+<msg timestamp="20230215 10:41:39.038" level="INFO">${length} = 18</msg>
+<status status="PASS" starttime="20230215 10:41:39.038" endtime="20230215 10:41:39.038"/>
+</kw>
+<if>
+<branch type="IF" condition="${length} == 18">
+<kw name="Set Variable" library="BuiltIn">
+<var>${status}</var>
+<arg>${True}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230215 10:41:39.057" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230215 10:41:39.038" endtime="20230215 10:41:39.058"/>
+</kw>
+<status status="PASS" starttime="20230215 10:41:39.038" endtime="20230215 10:41:39.059"/>
+</branch>
+<status status="PASS" starttime="20230215 10:41:39.038" endtime="20230215 10:41:39.060"/>
+</if>
+<msg timestamp="20230215 10:41:39.061" level="INFO">${ibanResult} = True</msg>
+<status status="PASS" starttime="20230215 10:41:39.030" endtime="20230215 10:41:39.061"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${ibanResult}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>IBAN virhe</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230215 10:41:39.066" endtime="20230215 10:41:39.066"/>
+</kw>
+<status status="NOT RUN" starttime="20230215 10:41:39.066" endtime="20230215 10:41:39.066"/>
+</branch>
+<status status="PASS" starttime="20230215 10:41:39.065" endtime="20230215 10:41:39.066"/>
+</if>
+<kw name="Check Amounts From Invoice">
+<var>${sumResult}</var>
+<arg>2332,22</arg>
+<arg>2332,23</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${status}</var>
+<arg>${False}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230215 10:41:39.072" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20230215 10:41:39.072" endtime="20230215 10:41:39.072"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${totalSumFromHeader}</var>
+<arg>${totalSumFromHeader}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230215 10:41:39.076" level="FAIL">'2332,22' cannot be converted to a floating point number: ValueError: could not convert string to float: '2332,22'</msg>
+<status status="FAIL" starttime="20230215 10:41:39.076" endtime="20230215 10:41:39.076"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${totalSumFromRows}</var>
+<arg>${totalSumFromRows}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" starttime="20230215 10:41:39.085" endtime="20230215 10:41:39.085"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${diff}</var>
+<arg>0,01</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" starttime="20230215 10:41:39.086" endtime="20230215 10:41:39.087"/>
+</kw>
+<kw name="${status}= Is Equal">
+<arg>${totalSumFromHeader}</arg>
+<arg>${totalSumFromRows}</arg>
+<arg>${diff}</arg>
+<status status="NOT RUN" starttime="20230215 10:41:39.092" endtime="20230215 10:41:39.092"/>
+</kw>
+<status status="FAIL" starttime="20230215 10:41:39.071" endtime="20230215 10:41:39.092"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${sumResult}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Summa virhe</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230215 10:41:39.092" endtime="20230215 10:41:39.092"/>
+</kw>
+<status status="NOT RUN" starttime="20230215 10:41:39.092" endtime="20230215 10:41:39.100"/>
+</branch>
+<status status="NOT RUN" starttime="20230215 10:41:39.092" endtime="20230215 10:41:39.101"/>
+</if>
+<status status="FAIL" starttime="20230215 10:41:39.018" endtime="20230215 10:41:39.104">'2332,22' cannot be converted to a floating point number: ValueError: could not convert string to float: '2332,22'</status>
+</test>
+<status status="FAIL" starttime="20230215 10:41:38.913" endtime="20230215 10:41:39.108"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tietokanta">Tietokanta</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

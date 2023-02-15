@@ -28,7 +28,7 @@ def isReferenceNumberCorrect(referencenumber):
 
     if (result == int (checknumber)):
         return True
-    return False
+    return false
 
 def isEqual(totalHeaderSum, totalRowSum, maxDifference):
     if (abs(totalHeaderSum - totalRowSum) < maxDifference):
