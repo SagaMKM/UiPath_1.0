@@ -3,6 +3,7 @@ Library    String
 Library    DatabaseLibrary
 Library    OperatingSystem
 Library    Collections
+Library    validointi.py
 
 
 *** Variables ***
@@ -22,7 +23,7 @@ ${headers} Get file ${PATH}InvoiceHeaderData.csv
 ${rows} Get file ${PATH}InvoiceRowData.csv
 
 ${rows} Split String 
-=======
+
     #luetaan csv muuttujiin
     ${headerCSV}=    Get File    ${PATH}InvoiceHeaderData.csv
     ${rowCSV}=    Get File    ${PATH}InvoiceRowData.csv
@@ -40,4 +41,13 @@ ${rows} Split String
 
     Log    ${headerRow}
     ${invoiceNumber}=    Set Variable    ${headerRow}[0]
+
+*** Test Cases***
+validointitesti
+    ${referenceResult}=     Is Reference Number Correct     893479835
+    
+    if  not ${referenceResult}
+        Log to console  Viite virhe
+    end
+
 
