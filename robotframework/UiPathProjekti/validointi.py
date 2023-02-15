@@ -30,6 +30,11 @@ def isReferenceNumberCorrect(referencenumber):
         return True
     return false
 
+def isEqual(totalHeaderSum, totalRowSum, maxDifference):
+    if (totalHeaderSum == totalRowSum):
+        return True
+    return False
+
     if _name_=="_main":
         ref = '893479835'
         result = isReferenceNumberCorrect(ref)
