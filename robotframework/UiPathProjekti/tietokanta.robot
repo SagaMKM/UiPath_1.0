@@ -57,18 +57,52 @@ ${rows} Split String
     ${rowCSV}=    Get File    ${PATH}InvoiceRowData.csv
     Log    ${rowCSV}
 
+    #yksittäinen käsittely
     @{header}=    Split String    ${headerCSV}    \n
     @{row}=    Split String    ${rowCSV}    \n
     Log    ${row}
 
+    #poistetaan otsikko 2 riviä
+    #saga
+    ${length}=  Get length  ${headers}
+    ${length}=  Evaluate    ${length}-1
     ${index}=    Convert To Integer    0
+
+    Remove from list    ${header}    ${length}
     Remove from list    ${header}    ${index}
+
     Log    ${header}
+
+    ${length}=  Get length  ${rows}
+    ${length}=  Evaluate  ${length}-1
+
+    Remove From List    ${rows} ${length}
+    Remove From List    ${rows} ${index}
+
+    Set Global Variable ${headers}
+    Set Global Variable ${rows}
 
     @{headerRow}=    Split String    ${header}[0]    ;
 
     Log    ${headerRow}
     ${invoiceNumber}=    Set Variable    ${headerRow}[0]
+
+*** Test Cases***
+Loop all invoicerows
+    FOR ${element}  IN  @{rows}
+        Log ${element}
+
+        @{items}=   Split String    ${element}  ;
+        ${invoiceNumber}=   Set Variable    ${items}[7]
+
+
+        #Nämä muuttujat pitää tarkistaa videossa invoicenumber ja rowinvoicenumber
+        Log ${invoiceNumber}
+        Log ${InvoiceRowData} 
+    END
+
+   
+
 
 *** Test Cases***
 validointitesti
