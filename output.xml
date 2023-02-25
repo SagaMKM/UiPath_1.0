@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20230225 22:12:17.209" rpa="false" schemaversion="3">
+<suite id="s1" name="Tietokanta" source="c:\Users\sagam\OneDrive\Tiedostot\GitHub\UiPath3\robotframework\uipathprojekti\tietokanta.robot">
+<test id="s1-t1" name="projektin polku" line="87">
+<kw name="Connect To Database" library="DatabaseLibrary">
+<arg>pymysql</arg>
+<arg>${dbname}</arg>
+<arg>${dbuser}</arg>
+<arg>${dbpass}</arg>
+<arg>${dbhost}</arg>
+<arg>${dbport}</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20230225 22:12:17.328" level="INFO">Connecting using : pymysql.connect(db=Uipathprojekti, user=robotuser, passwd=password, host=localhost, port=3306, charset=None) </msg>
+<msg timestamp="20230225 22:12:17.367" level="FAIL">'cryptography' package is required for sha256_password or caching_sha2_password auth methods</msg>
+<status status="FAIL" starttime="20230225 22:12:17.304" endtime="20230225 22:12:17.369"/>
+</kw>
+<status status="FAIL" starttime="20230225 22:12:17.302" endtime="20230225 22:12:17.371">'cryptography' package is required for sha256_password or caching_sha2_password auth methods</status>
+</test>
+<test id="s1-t2" name="${headers} Get file C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath/robotframework/UiPathProjekti/InvoiceHeaderData.csv" line="91">
+<status status="FAIL" starttime="20230225 22:12:17.374" endtime="20230225 22:12:17.376">Test contains no keywords.</status>
+</test>
+<test id="s1-t3" name="${rows} Get file C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath/robotframework/UiPathProjekti/InvoiceRowData.csv" line="92">
+<status status="FAIL" starttime="20230225 22:12:17.387" endtime="20230225 22:12:17.389">Test contains no keywords.</status>
+</test>
+<test id="s1-t4" name="${rows} Split String" line="94">
+<kw name="Get File" library="OperatingSystem">
+<var>${headerCSV}</var>
+<arg>${PATH}InvoiceHeaderData.csv</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20230225 22:12:17.400" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\niemi\Desktop\HAMK\HAMK21_22\Ohjelmointi\webservices\UiPath\robotframework\UiPathProjekti\InvoiceHeaderData.csv"&gt;C:\Users\niemi\Desktop\HAMK\HAMK21_22\Ohjelmointi\webservices\UiPath\robotframework\UiPathProjekti\InvoiceHeaderData.csv&lt;/a&gt;'.</msg>
+<msg timestamp="20230225 22:12:17.401" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\niemi\\Desktop\\HAMK\\HAMK21_22\\Ohjelmointi\\webservices\\UiPath\\robotframework\\UiPathProjekti\\InvoiceHeaderData.csv'</msg>
+<status status="FAIL" starttime="20230225 22:12:17.399" endtime="20230225 22:12:17.402"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${rowCSV}</var>
+<arg>${PATH}InvoiceRowData.csv</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.403" endtime="20230225 22:12:17.404"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${rowCSV}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.405" endtime="20230225 22:12:17.405"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{headers}</var>
+<arg>${headerCSV}</arg>
+<arg>\n</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.406" endtime="20230225 22:12:17.407"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{rows}</var>
+<arg>${rowCSV}</arg>
+<arg>\n</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.408" endtime="20230225 22:12:17.408"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${rows}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.409" endtime="20230225 22:12:17.409"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${headers}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.410" endtime="20230225 22:12:17.411"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${length}</var>
+<arg>${length}-1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.412" endtime="20230225 22:12:17.412"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${index}</var>
+<arg>0</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.413" endtime="20230225 22:12:17.414"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${headers}</arg>
+<arg>${length}</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.415" endtime="20230225 22:12:17.415"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${headers}</arg>
+<arg>${index}</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.416" endtime="20230225 22:12:17.416"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${headers}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.417" endtime="20230225 22:12:17.417"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${rows}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.419" endtime="20230225 22:12:17.419"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${length}</var>
+<arg>${length}-1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.420" endtime="20230225 22:12:17.420"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${rows} ${length}</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.421" endtime="20230225 22:12:17.421"/>
+</kw>
+<kw name="Remove From List" library="Collections">
+<arg>${rows} ${index}</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.422" endtime="20230225 22:12:17.422"/>
+</kw>
+<kw name="Set Global Variable ${headers}">
+<status status="NOT RUN" starttime="20230225 22:12:17.426" endtime="20230225 22:12:17.426"/>
+</kw>
+<kw name="Set Global Variable ${rows}">
+<status status="NOT RUN" starttime="20230225 22:12:17.432" endtime="20230225 22:12:17.433"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{headerRow}</var>
+<arg>${headers}[0]</arg>
+<arg>;</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.434" endtime="20230225 22:12:17.434"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${headerRow}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.435" endtime="20230225 22:12:17.435"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${invoiceNumber}</var>
+<arg>${headerRow}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.436" endtime="20230225 22:12:17.436"/>
+</kw>
+<status status="FAIL" starttime="20230225 22:12:17.396" endtime="20230225 22:12:17.437">FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\niemi\\Desktop\\HAMK\\HAMK21_22\\Ohjelmointi\\webservices\\UiPath\\robotframework\\UiPathProjekti\\InvoiceHeaderData.csv'</status>
+</test>
+<test id="s1-t5" name="Loop all invoicerows" line="136">
+<kw name="FOR ${element}">
+<arg>IN</arg>
+<arg>@{rows}</arg>
+<msg timestamp="20230225 22:12:17.443" level="FAIL">No keyword with name 'FOR ${element}' found.</msg>
+<status status="FAIL" starttime="20230225 22:12:17.443" endtime="20230225 22:12:17.443"/>
+</kw>
+<kw name="Log ${element}">
+<status status="NOT RUN" starttime="20230225 22:12:17.447" endtime="20230225 22:12:17.448"/>
+</kw>
+<kw name="Split String" library="String">
+<var>@{items}</var>
+<arg>${element}</arg>
+<arg>;</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.448" endtime="20230225 22:12:17.449"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${rowInvoiceNumber}</var>
+<arg>${items}[7]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.449" endtime="20230225 22:12:17.450"/>
+</kw>
+<kw name="Log ${invoiceNumber}">
+<status status="NOT RUN" starttime="20230225 22:12:17.453" endtime="20230225 22:12:17.453"/>
+</kw>
+<kw name="Log ${rowInvoiceNumber}">
+<status status="NOT RUN" starttime="20230225 22:12:17.457" endtime="20230225 22:12:17.457"/>
+</kw>
+<if>
+<branch type="IF" condition="'${rowInvoiceNumber}' == '${InvoiceNumber}'">
+<kw name="Log" library="BuiltIn">
+<arg>Lisätään rivejä laskulle</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.458" endtime="20230225 22:12:17.459"/>
+</kw>
+<kw name="Add Row Data to List">
+<arg>${items}</arg>
+<status status="NOT RUN" starttime="20230225 22:12:17.459" endtime="20230225 22:12:17.460"/>
+</kw>
+<status status="NOT RUN" starttime="20230225 22:12:17.458" endtime="20230225 22:12:17.460"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Onko tietokantalistassa jo rivejä</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.460" endtime="20230225 22:12:17.461"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${ListToDB}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.461" endtime="20230225 22:12:17.461"/>
+</kw>
+<if>
+<branch type="IF" condition="${length} == ${0}">
+<kw name="Log" library="BuiltIn">
+<arg>Ensimmäisen laskun tapaus</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.461" endtime="20230225 22:12:17.462"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${InvoiceNumber}</var>
+<arg>${rowInvoiceNumber}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.462" endtime="20230225 22:12:17.462"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${InvoiceNumber}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.462" endtime="20230225 22:12:17.462"/>
+</kw>
+<kw name="Add Row Data to List">
+<arg>${items}</arg>
+<status status="NOT RUN" starttime="20230225 22:12:17.463" endtime="20230225 22:12:17.463"/>
+</kw>
+<status status="NOT RUN" starttime="20230225 22:12:17.461" endtime="20230225 22:12:17.463"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Lasku vaihtuu, pitää käsitellä myös otsikkodata</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.463" endtime="20230225 22:12:17.464"/>
+</kw>
+<for flavor="IN">
+<var>${headerElement}</var>
+<value>@{headers}</value>
+<iter>
+<var name="${headerElement}"/>
+<kw name="Split String" library="String">
+<var>${headerItems}</var>
+<arg>${headerElement}</arg>
+<arg>;</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.464" endtime="20230225 22:12:17.465"/>
+</kw>
+<if>
+<branch type="IF" condition="'${headerItems}[0] == '${InvoiceNumber}'">
+<kw name="Log" library="BuiltIn">
+<arg>Laksu löytyi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.465" endtime="20230225 22:12:17.465"/>
+</kw>
+<kw name="Add Invoice Header to DB">
+<arg>${headerItems}</arg>
+<status status="NOT RUN" starttime="20230225 22:12:17.465" endtime="20230225 22:12:17.465"/>
+</kw>
+<for flavor="IN">
+<var>${rowElement}</var>
+<value>@{ListToDB}</value>
+<iter>
+<var name="${rowElement}"/>
+<kw name="Add Invoice Row To DB">
+<arg>${rowElement}</arg>
+<status status="NOT RUN" starttime="20230225 22:12:17.466" endtime="20230225 22:12:17.466"/>
+</kw>
+<status status="NOT RUN" starttime="20230225 22:12:17.466" endtime="20230225 22:12:17.466"/>
+</iter>
+<status status="NOT RUN" starttime="20230225 22:12:17.466" endtime="20230225 22:12:17.466"/>
+</for>
+<status status="NOT RUN" starttime="20230225 22:12:17.465" endtime="20230225 22:12:17.467"/>
+</branch>
+<status status="NOT RUN" starttime="20230225 22:12:17.465" endtime="20230225 22:12:17.467"/>
+</if>
+<status status="NOT RUN" starttime="20230225 22:12:17.464" endtime="20230225 22:12:17.467"/>
+</iter>
+<status status="NOT RUN" starttime="20230225 22:12:17.464" endtime="20230225 22:12:17.467"/>
+</for>
+<kw name="Create List" library="BuiltIn">
+<var>${ListToDB}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.467" endtime="20230225 22:12:17.467"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ListToDB}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.468" endtime="20230225 22:12:17.468"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${InvoiceNumber}</var>
+<arg>${rowInvoiceNumber}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.468" endtime="20230225 22:12:17.468"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${InvoiceNumber}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.468" endtime="20230225 22:12:17.469"/>
+</kw>
+<kw name="Add Row Data to List">
+<arg>${items}</arg>
+<status status="NOT RUN" starttime="20230225 22:12:17.469" endtime="20230225 22:12:17.469"/>
+</kw>
+<status status="NOT RUN" starttime="20230225 22:12:17.463" endtime="20230225 22:12:17.469"/>
+</branch>
+<status status="NOT RUN" starttime="20230225 22:12:17.461" endtime="20230225 22:12:17.469"/>
+</if>
+<status status="NOT RUN" starttime="20230225 22:12:17.460" endtime="20230225 22:12:17.469"/>
+</branch>
+<status status="NOT RUN" starttime="20230225 22:12:17.458" endtime="20230225 22:12:17.469"/>
+</if>
+<kw name="End" library="Reserved">
+<status status="NOT RUN" starttime="20230225 22:12:17.470" endtime="20230225 22:12:17.470"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${ListToDB}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.470" endtime="20230225 22:12:17.471"/>
+</kw>
+<if>
+<branch type="IF" condition="${length} &gt; ${0}">
+<kw name="Log" library="BuiltIn">
+<arg>Viimeisen laskun otsikkokäsittely</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.472" endtime="20230225 22:12:17.472"/>
+</kw>
+<for flavor="IN">
+<var>${headerElement}</var>
+<value>@{headers}</value>
+<iter>
+<var name="${headerElement}"/>
+<kw name="Split String" library="String">
+<var>${headerItems}</var>
+<arg>${headerElement}</arg>
+<arg>;</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.473" endtime="20230225 22:12:17.473"/>
+</kw>
+<if>
+<branch type="IF" condition="'${headerItems}[0] == '${InvoiceNumber}'">
+<kw name="Log" library="BuiltIn">
+<arg>Laksu löytyi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.474" endtime="20230225 22:12:17.474"/>
+</kw>
+<kw name="Add Invoice Header to DB">
+<arg>${headerItems}</arg>
+<status status="NOT RUN" starttime="20230225 22:12:17.475" endtime="20230225 22:12:17.475"/>
+</kw>
+<for flavor="IN">
+<var>${rowElement}</var>
+<value>@{ListToDB}</value>
+<iter>
+<var name="${rowElement}"/>
+<kw name="Add Invoice Row To DB">
+<arg>${rowElement}</arg>
+<status status="NOT RUN" starttime="20230225 22:12:17.476" endtime="20230225 22:12:17.476"/>
+</kw>
+<status status="NOT RUN" starttime="20230225 22:12:17.476" endtime="20230225 22:12:17.477"/>
+</iter>
+<status status="NOT RUN" starttime="20230225 22:12:17.475" endtime="20230225 22:12:17.477"/>
+</for>
+<status status="NOT RUN" starttime="20230225 22:12:17.473" endtime="20230225 22:12:17.477"/>
+</branch>
+<status status="NOT RUN" starttime="20230225 22:12:17.473" endtime="20230225 22:12:17.477"/>
+</if>
+<status status="NOT RUN" starttime="20230225 22:12:17.473" endtime="20230225 22:12:17.477"/>
+</iter>
+<status status="NOT RUN" starttime="20230225 22:12:17.472" endtime="20230225 22:12:17.478"/>
+</for>
+<status status="NOT RUN" starttime="20230225 22:12:17.472" endtime="20230225 22:12:17.478"/>
+</branch>
+<status status="NOT RUN" starttime="20230225 22:12:17.472" endtime="20230225 22:12:17.478"/>
+</if>
+<status status="FAIL" starttime="20230225 22:12:17.439" endtime="20230225 22:12:17.479">No keyword with name 'FOR ${element}' found.</status>
+</test>
+<test id="s1-t6" name="validointitesti" line="243">
+<kw name="Is Reference Number Correct" library="validointi">
+<var>${referenceResult}</var>
+<arg>893479835</arg>
+<msg timestamp="20230225 22:12:17.483" level="INFO">205</msg>
+<msg timestamp="20230225 22:12:17.483" level="INFO">${referenceResult} = True</msg>
+<status status="PASS" starttime="20230225 22:12:17.482" endtime="20230225 22:12:17.483"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${referenceResult}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Viite virhe</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.484" endtime="20230225 22:12:17.485"/>
+</kw>
+<status status="NOT RUN" starttime="20230225 22:12:17.484" endtime="20230225 22:12:17.485"/>
+</branch>
+<status status="PASS" starttime="20230225 22:12:17.484" endtime="20230225 22:12:17.485"/>
+</if>
+<kw name="Check IBAN">
+<var>${ibanResult}</var>
+<arg>FI23 2333 4334 3431 34</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${status}</var>
+<arg>${False}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230225 22:12:17.487" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20230225 22:12:17.486" endtime="20230225 22:12:17.487"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${iban}</var>
+<arg>${iban}</arg>
+<arg>${SPACE}</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20230225 22:12:17.488" level="INFO">${iban} = FI2323334334343134</msg>
+<status status="PASS" starttime="20230225 22:12:17.487" endtime="20230225 22:12:17.488"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${iban}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20230225 22:12:17.488" level="INFO">Length is 18</msg>
+<msg timestamp="20230225 22:12:17.489" level="INFO">${length} = 18</msg>
+<status status="PASS" starttime="20230225 22:12:17.488" endtime="20230225 22:12:17.489"/>
+</kw>
+<if>
+<branch type="IF" condition="${length} == 18">
+<kw name="Set Variable" library="BuiltIn">
+<var>${status}</var>
+<arg>${True}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230225 22:12:17.490" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20230225 22:12:17.489" endtime="20230225 22:12:17.491"/>
+</kw>
+<status status="PASS" starttime="20230225 22:12:17.489" endtime="20230225 22:12:17.491"/>
+</branch>
+<status status="PASS" starttime="20230225 22:12:17.489" endtime="20230225 22:12:17.491"/>
+</if>
+<msg timestamp="20230225 22:12:17.492" level="INFO">${ibanResult} = True</msg>
+<status status="PASS" starttime="20230225 22:12:17.486" endtime="20230225 22:12:17.492"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${ibanResult}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>IBAN virhe</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.494" endtime="20230225 22:12:17.494"/>
+</kw>
+<status status="NOT RUN" starttime="20230225 22:12:17.493" endtime="20230225 22:12:17.495"/>
+</branch>
+<status status="PASS" starttime="20230225 22:12:17.493" endtime="20230225 22:12:17.495"/>
+</if>
+<kw name="Check Amounts From Invoice">
+<var>${sumResult}</var>
+<arg>2332,22</arg>
+<arg>2332,23</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${status}</var>
+<arg>${False}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230225 22:12:17.498" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20230225 22:12:17.497" endtime="20230225 22:12:17.498"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${totalSumFromHeader}</var>
+<arg>${totalSumFromHeader}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20230225 22:12:17.500" level="FAIL">'2332,22' cannot be converted to a floating point number: ValueError: could not convert string to float: '2332,22'</msg>
+<status status="FAIL" starttime="20230225 22:12:17.498" endtime="20230225 22:12:17.504"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${totalSumFromRows}</var>
+<arg>${totalSumFromRows}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.505" endtime="20230225 22:12:17.506"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${diff}</var>
+<arg>0,01</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.506" endtime="20230225 22:12:17.507"/>
+</kw>
+<kw name="${status}= Is Equal">
+<arg>${totalSumFromHeader}</arg>
+<arg>${totalSumFromRows}</arg>
+<arg>${diff}</arg>
+<status status="NOT RUN" starttime="20230225 22:12:17.510" endtime="20230225 22:12:17.511"/>
+</kw>
+<status status="FAIL" starttime="20230225 22:12:17.496" endtime="20230225 22:12:17.512"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${sumResult}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Summa virhe</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230225 22:12:17.513" endtime="20230225 22:12:17.513"/>
+</kw>
+<status status="NOT RUN" starttime="20230225 22:12:17.513" endtime="20230225 22:12:17.514"/>
+</branch>
+<status status="NOT RUN" starttime="20230225 22:12:17.513" endtime="20230225 22:12:17.514"/>
+</if>
+<status status="FAIL" starttime="20230225 22:12:17.481" endtime="20230225 22:12:17.514">'2332,22' cannot be converted to a floating point number: ValueError: could not convert string to float: '2332,22'</status>
+</test>
+<status status="FAIL" starttime="20230225 22:12:17.219" endtime="20230225 22:12:17.518"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="6" skip="0" id="s1" name="Tietokanta">Tietokanta</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
