@@ -12,7 +12,48 @@ ${dbhost}    localhost
 ${dbuser}    robotuser
 ${dbpass}    password
 ${dbport}    3306
+
+@{ListToDB}
+${InvoiceNumber}    empty
+
+
+
 ${PATH}    C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath/robotframework/UiPathProjekti/
+
+*** Keywords ***
+Add Invoice Row To DB
+        [Arguments]    ${items}
+    Make Connection    ${dbname}
+    ${insertStmt}=    Set Variable    insert into invoicerows    #tähän databasen variablet tyylillä: (invoicenumber,companyname...) ('${items}[0]',...); video 16 7:00 min
+    Execute Sql String    ${insertStmt}
+
+
+*** Keywords ***
+Add Invoice Header to DB
+    [Arguments]    ${items}
+    Make Connection    ${dbname}
+    #TODO: laskun päivä, summatiedot + status ja kommentit
+    ${insertStmt}=    Set Variable    insert into invoiceheader    #tähän databasen variablet tyylillä: (invoicenumber,companyname...) (${items}[0],...); video 16 7:00 min
+    Execute Sql String    ${insertStmt}
+
+*** Keywords ***
+Add Row Data to List
+    [Arguments]    ${items}
+
+
+    #Tarkista järjestys items numeroista eli tietokannan järjestys missä ovat
+    @{AddInvoiceRowData}=    Create List
+    Append To List    ${AddInvoiceRowData}    ${InvoiceNumber}
+    Append To List    ${AddInvoiceRowData}    ${items}[8]
+    Append To List    ${AddInvoiceRowData}    ${items}[0]
+    Append To List    ${AddInvoiceRowData}    ${items}[1]
+    Append To List    ${AddInvoiceRowData}    ${items}[2]
+    Append To List    ${AddInvoiceRowData}    ${items}[3]
+    Append To List    ${AddInvoiceRowData}    ${items}[4]
+    Append To List    ${AddInvoiceRowData}    ${items}[5]
+    Append To List    ${AddInvoiceRowData}    ${items}[6]
+
+    Append To List    ${ListToDB}    ${AddInvoiceRowData}
 
 *** Keywords ***
 Check Amounts From Invoice
@@ -58,9 +99,9 @@ ${rows} Split String
     Log    ${rowCSV}
 
     #yksittäinen käsittely
-    @{header}=    Split String    ${headerCSV}    \n
-    @{row}=    Split String    ${rowCSV}    \n
-    Log    ${row}
+    @{headers}=    Split String    ${headerCSV}    \n
+    @{rows}=    Split String    ${rowCSV}    \n
+    Log    ${rows}
 
     #poistetaan otsikko 2 riviä
     #saga
@@ -68,21 +109,25 @@ ${rows} Split String
     ${length}=  Evaluate    ${length}-1
     ${index}=    Convert To Integer    0
 
-    Remove from list    ${header}    ${length}
-    Remove from list    ${header}    ${index}
+    #headers remove
+    Remove from list    ${headers}    ${length}
+    Remove from list    ${headers}    ${index}
 
-    Log    ${header}
+    Log    ${headers}
 
     ${length}=  Get length  ${rows}
     ${length}=  Evaluate  ${length}-1
-
-    Remove From List    ${rows} ${length}
-    Remove From List    ${rows} ${index}
+    
+    #rows remove
+    Remove from list    ${rows} ${length}
+    Remove from list    ${rows} ${index}
 
     Set Global Variable ${headers}
     Set Global Variable ${rows}
 
-    @{headerRow}=    Split String    ${header}[0]    ;
+    #ylimääräiset?
+
+    @{headerRow}=    Split String    ${headers}[0]    ;
 
     Log    ${headerRow}
     ${invoiceNumber}=    Set Variable    ${headerRow}[0]
@@ -90,15 +135,105 @@ ${rows} Split String
 *** Test Cases***
 Loop all invoicerows
     FOR ${element}  IN  @{rows}
+
         Log ${element}
 
         @{items}=   Split String    ${element}  ;
-        ${invoiceNumber}=   Set Variable    ${items}[7]
+
+        #käsiteltävän rivin laskunumero
+        ${rowInvoiceNumber}=   Set Variable    ${items}[7]
 
 
         #Nämä muuttujat pitää tarkistaa videossa invoicenumber ja rowinvoicenumber
         Log ${invoiceNumber}
-        Log ${InvoiceRowData} 
+        Log ${rowInvoiceNumber} 
+
+
+        #vaihtuuko laskunumero
+        IF    '${rowInvoiceNumber}' == '${InvoiceNumber}'
+            Log    Lisätään rivejä laskulle
+            
+            #lisää käsiteltävän laskun tiedot listaan
+            Add Row Data to List    ${items}
+        ELSE
+            Log    Onko tietokantalistassa jo rivejä
+            ${length}=    Get Length    ${ListToDB}
+            IF    ${length} == ${0}
+                Log    Ensimmäisen laskun tapaus
+                #päivittää laskun numeron
+                ${InvoiceNumber}=    Set Variable    ${rowInvoiceNumber}
+                Set Global Variable    ${InvoiceNumber}
+                #lisää käsiteltävän laskun tiedot listaan
+
+                Add Row Data to List    ${items}
+            ELSE
+                Log    Lasku vaihtuu, pitää käsitellä myös otsikkodata
+
+                #Etsi laskun otsikko rivi
+                FOR    ${headerElement}    IN    @{headers}
+                    ${headerItems}=    Split String    ${headerElement}    ;
+
+                    IF    '${headerItems}[0] == '${InvoiceNumber}'
+                        Log    Laksu löytyi
+
+                        #validointi
+
+                        #Syötä laskun otsikkorivi tietokantaan
+                        Add Invoice Header to DB    ${headerItems}
+                        
+                        #syötä laskun rivit tietokantaan
+                        FOR    ${rowElement}    IN    @{ListToDB}
+                            Add Invoice Row To DB    ${rowElement}
+                            
+                        END
+                        
+                    END
+                    
+                END
+              
+
+              
+
+              
+
+                #valmista prosessi seuraavaan laskuun
+                ${ListToDB}    Create List
+                Set Global Variable    ${ListToDB}
+                ${InvoiceNumber}=    Set Variable    ${rowInvoiceNumber}
+                Set Global Variable    ${InvoiceNumber}
+
+                #lisää käsiteltävän laskun tiedot listaan
+                Add Row Data to List    ${items}
+            END
+        END
+    END
+
+    #viimeisen laskun tapaus
+    ${length}=    Get Length    ${ListToDB}
+    IF    ${length} > ${0}
+        Log    Viimeisen laskun otsikkokäsittely
+
+#Etsi laskun otsikko rivi
+        FOR    ${headerElement}    IN    @{headers}
+            ${headerItems}=    Split String    ${headerElement}    ;
+
+            IF    '${headerItems}[0] == '${InvoiceNumber}'
+                Log    Laksu löytyi
+
+                #validointi
+
+                #Syötä laskun otsikkorivi tietokantaan
+                Add Invoice Header to DB    ${headerItems}
+                
+                #syötä laskun rivit tietokantaan
+                FOR    ${rowElement}    IN    @{ListToDB}
+                    Add Invoice Row To DB    ${rowElement}
+                    
+                END
+                
+            END
+            
+        END
     END
 
    
