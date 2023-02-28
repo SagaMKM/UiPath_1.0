@@ -17,7 +17,6 @@ ${dbport}    3306
 ${InvoiceNumber}    empty
 
 
-
 ${PATH}    C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath3/
 
 
@@ -90,23 +89,23 @@ Check IBAN
     [Return]    ${status}
 
 *** Test Cases ***
-projektin polku
-    Connect To Database    pymysql    ${dbname}    ${dbuser}    ${dbpass}    ${dbhost}    ${dbport}
+Read CSV file to list
+#Connect To Database    pymysql    ${dbname}    ${dbuser}    ${dbpass}    ${dbhost}    ${dbport}
 
+    Make Connection    ${dbname}
+#${headers}    Get file     ${PATH}InvoiceHeaderData.csv
+#${rows}    Get file     ${PATH}InvoiceRowData.csv
 
-${headers} Get file ${PATH}InvoiceHeaderData.csv
-${rows} Get file ${PATH}InvoiceRowData.csv
-
-${rows} Split String 
+#${rows} Split String 
 
     #luetaan csv muuttujiin
-    ${headerCSV}=    Get File    ${PATH}InvoiceHeaderData.csv
-    ${rowCSV}=    Get File    ${PATH}InvoiceRowData.csv
-    Log    ${rowCSV}
+    ${headersCSV}=    Get File    ${PATH}InvoiceHeaderData.csv
+    ${rowsCSV}=    Get File    ${PATH}InvoiceRowData.csv
+    Log    ${rowsCSV}
 
     #yksittäinen käsittely
-    @{headers}=    Split String    ${headerCSV}    \n
-    @{rows}=    Split String    ${rowCSV}    \n
+    @{headers}=    Split String    ${headersCSV}    \n
+    @{rows}=    Split String    ${rowsCSV}    \n
     Log    ${rows}
 
     #poistetaan otsikko 2 riviä
