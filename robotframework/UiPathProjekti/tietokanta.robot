@@ -99,59 +99,59 @@ Read CSV file to list
 #${rows} Split String 
 
     #luetaan csv muuttujiin
-    ${headersCSV}=    Get File    ${PATH}InvoiceHeaderData.csv
-    ${rowsCSV}=    Get File    ${PATH}InvoiceRowData.csv
-    Log    ${rowsCSV}
+    ${outputHeader}=    Get File    ${PATH}InvoiceHeaderData.csv
+    ${outputRows}=    Get File    ${PATH}InvoiceRowData.csv
+    #Log    ${outputRows}
 
     #yksittäinen käsittely
-    @{headers}=    Split String    ${headersCSV}    \n
-    @{rows}=    Split String    ${rowsCSV}    \n
-    Log    ${rows}
+    @{headers}=    Split String    ${outputHeader}    \n
+    @{rows}=    Split String    ${outputRows}    \n
+    #Log    ${rows}
 
     #poistetaan otsikko 2 riviä
     #saga
-    ${length}=  Get length  ${headers}
-    ${length}=  Evaluate    ${length}-1
+    ${length}=    Get length    ${headers}
+    ${length}=    Evaluate    ${length}-1
     ${index}=    Convert To Integer    0
 
     #headers remove
     Remove from list    ${headers}    ${length}
     Remove from list    ${headers}    ${index}
 
-    Log    ${headers}
+    #Log    ${headers}
 
-    ${length}=  Get length  ${rows}
-    ${length}=  Evaluate  ${length}-1
+    ${length}=    Get length    ${rows}
+    ${length}=    Evaluate    ${length}-1
     
     #rows remove
     Remove from list    ${rows}    ${length}
     Remove from list    ${rows}    ${index}
 
-    Set Global Variable ${headers}
-    Set Global Variable ${rows}
+    Set Global Variable    ${headers}
+    Set Global Variable    ${rows}
 
     #ylimääräiset?
 
-    @{headerRow}=    Split String    ${headers}[0]    ;
+    #@{headerRow}=    Split String    ${headers}[0]    ;
 
-    Log    ${headerRow}
-    ${invoiceNumber}=    Set Variable    ${headerRow}[0]
+    #Log    ${headerRow}
+    #${invoiceNumber}=    Set Variable    ${headerRow}[0]
 
 *** Test Cases***
 Loop all invoicerows
-    FOR    ${element}  IN    @    {rows}
+    FOR    ${element}    IN    @{rows}
 
-        Log ${element}
+        Log    ${element}
 
-        @{items}=   Split String    ${element}  ;
+        @{items}=    Split String    ${element}    ;
 
         #käsiteltävän rivin laskunumero
-        ${rowInvoiceNumber}=   Set Variable    ${items}[7]
+        ${rowInvoiceNumber}=    Set Variable    ${items}[7]
 
 
         #Nämä muuttujat pitää tarkistaa videossa invoicenumber ja rowinvoicenumber
-        Log ${invoiceNumber}
-        Log ${rowInvoiceNumber} 
+        Log    ${invoiceNumber}
+        Log    ${rowInvoiceNumber} 
 
 
         #vaihtuuko laskunumero
@@ -219,7 +219,7 @@ Loop all invoicerows
         Log    Viimeisen laskun otsikkokäsittely
 
 #Etsi laskun otsikko rivi
-        FOR    ${headerElement}    IN    @    {headers}
+        FOR    ${headerElement}    IN    @{headers}
             ${headerItems}=    Split String    ${headerElement}    ;
 
             IF    '${headerItems}[0] == '${InvoiceNumber}'
