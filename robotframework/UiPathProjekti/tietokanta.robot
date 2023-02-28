@@ -18,7 +18,7 @@ ${InvoiceNumber}    empty
 
 
 
-${PATH}    C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath/robotframework/UiPathProjekti/
+${PATH}    C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath3/
 
 
 *** Keywords ***
