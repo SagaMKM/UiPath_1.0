@@ -20,9 +20,15 @@ ${InvoiceNumber}    empty
 
 ${PATH}    C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath/robotframework/UiPathProjekti/
 
+
+*** Keywords ***
+Make Connection
+    [Arguments]    ${dbtoconnect}
+    Connect To Database    pymysql    ${dbtoconnect}    ${dbuser}    ${dbpass}    ${dbhost}    ${dbport}
+
 *** Keywords ***
 Add Invoice Row To DB
-        [Arguments]    ${items}
+    [Arguments]    ${items}
     Make Connection    ${dbname}
     ${insertStmt}=    Set Variable    insert into invoicerows    #tähän databasen variablet tyylillä: (invoicenumber,companyname...) ('${items}[0]',...); video 16 7:00 min
     Execute Sql String    ${insertStmt}
@@ -119,8 +125,8 @@ ${rows} Split String
     ${length}=  Evaluate  ${length}-1
     
     #rows remove
-    Remove from list    ${rows} ${length}
-    Remove from list    ${rows} ${index}
+    Remove from list    ${rows}    ${length}
+    Remove from list    ${rows}    ${index}
 
     Set Global Variable ${headers}
     Set Global Variable ${rows}
@@ -134,7 +140,7 @@ ${rows} Split String
 
 *** Test Cases***
 Loop all invoicerows
-    FOR ${element}  IN  @{rows}
+    FOR    ${element}  IN    @    {rows}
 
         Log ${element}
 
@@ -170,7 +176,7 @@ Loop all invoicerows
                 Log    Lasku vaihtuu, pitää käsitellä myös otsikkodata
 
                 #Etsi laskun otsikko rivi
-                FOR    ${headerElement}    IN    @{headers}
+                FOR    ${headerElement}    IN    @    {headers}
                     ${headerItems}=    Split String    ${headerElement}    ;
 
                     IF    '${headerItems}[0] == '${InvoiceNumber}'
@@ -214,7 +220,7 @@ Loop all invoicerows
         Log    Viimeisen laskun otsikkokäsittely
 
 #Etsi laskun otsikko rivi
-        FOR    ${headerElement}    IN    @{headers}
+        FOR    ${headerElement}    IN    @    {headers}
             ${headerItems}=    Split String    ${headerElement}    ;
 
             IF    '${headerItems}[0] == '${InvoiceNumber}'
