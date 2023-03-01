@@ -29,7 +29,7 @@ Make Connection
 Add Invoice Row To DB
     [Arguments]    ${items}
     Make Connection    ${dbname}
-    ${insertStmt}=    Set Variable    insert into invoicerows    #tähän databasen variablet tyylillä: (invoicenumber,companyname...) ('${items}[0]',...); video 16 7:00 min
+    ${insertStmt}=    Set Variable    insert into InvoiceRow (rownumber, description, quantity, unit, unitprice, vatpercent, vat, total, InvoiceHeader_invoicenumber) values ('${items}[0]', '${items}[1]', '${items}[2]', '${items}[3]', '${items}[4]', '${items}[5]', '${items}[6]', '${items}[8]', '${items}[7]');
     Execute Sql String    ${insertStmt}
 
 
@@ -38,7 +38,7 @@ Add Invoice Header to DB
     [Arguments]    ${items}
     Make Connection    ${dbname}
     #TODO: laskun päivä, summatiedot + status ja kommentit
-    ${insertStmt}=    Set Variable    insert into invoiceheader    #tähän databasen variablet tyylillä: (invoicenumber,companyname...) (${items}[0],...); video 16 7:00 min
+    ${insertStmt}=    Set Variable    insert into InvoiceHeader (invoicenumber, companyname, companycode, referencenumber, invoicedate, duedate, bankaccountnumber, amounttexctvat, vat, totalamount, vomments, InvoiceStatus_id) values ('${items}[0]', '${items}[1]', '${items}[5]', '${items}[2]', '2000-01-01', '2000-01-01', '${items}[6]', 0, 0, 0, 0, '');
     Execute Sql String    ${insertStmt}
 
 *** Keywords ***
@@ -48,7 +48,8 @@ Add Row Data to List
 
     #Tarkista järjestys items numeroista eli tietokannan järjestys missä ovat
     @{AddInvoiceRowData}=    Create List
-    Append To List    ${AddInvoiceRowData}    ${InvoiceNumber}
+    
+    
     Append To List    ${AddInvoiceRowData}    ${items}[8]
     Append To List    ${AddInvoiceRowData}    ${items}[0]
     Append To List    ${AddInvoiceRowData}    ${items}[1]
@@ -57,6 +58,7 @@ Add Row Data to List
     Append To List    ${AddInvoiceRowData}    ${items}[4]
     Append To List    ${AddInvoiceRowData}    ${items}[5]
     Append To List    ${AddInvoiceRowData}    ${items}[6]
+    Append To List    ${AddInvoiceRowData}    ${InvoiceNumber}
 
     Append To List    ${ListToDB}    ${AddInvoiceRowData}
 
@@ -139,7 +141,7 @@ Read CSV file to list
 
 *** Test Cases***
 Loop all invoicerows
-    FOR    ${element}    IN    @{rows}
+    FOR    ${element}    IN    @    {rows}
 
         Log    ${element}
 
@@ -150,7 +152,7 @@ Loop all invoicerows
 
 
         #Nämä muuttujat pitää tarkistaa videossa invoicenumber ja rowinvoicenumber
-        Log    ${invoiceNumber}
+        Log    ${InvoiceNumber}
         Log    ${rowInvoiceNumber} 
 
 
@@ -178,7 +180,7 @@ Loop all invoicerows
                 FOR    ${headerElement}    IN    @    {headers}
                     ${headerItems}=    Split String    ${headerElement}    ;
 
-                    IF    '${headerItems}[0] == '${InvoiceNumber}'
+                    IF    '${headerItems}[0]' == '${InvoiceNumber}'
                         Log    Laksu löytyi
 
                         #validointi
