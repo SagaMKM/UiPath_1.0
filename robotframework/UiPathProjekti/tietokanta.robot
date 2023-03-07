@@ -3,22 +3,21 @@ Library    String
 Library    DatabaseLibrary
 Library    OperatingSystem
 Library    Collections
+Library    DateTime
 Library    validointi.py
 
 
 *** Variables ***
+@{ListToDB}
+${InvoiceNumber}    empty
+${PATH}    C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath3/
+
+# tietokantaan liittyvät apumuuttujat
 ${dbname}    Uipathprojekti
 ${dbhost}    localhost
 ${dbuser}    robotuser
 ${dbpass}    password
 ${dbport}    3306
-
-@{ListToDB}
-${InvoiceNumber}    empty
-
-
-${PATH}    C:/Users/niemi/Desktop/HAMK/HAMK21_22/Ohjelmointi/webservices/UiPath3/
-
 
 *** Keywords ***
 Make Connection
@@ -35,20 +34,50 @@ Add Invoice Row To DB
 
 *** Keywords ***
 Add Invoice Header to DB
-    [Arguments]    ${items}
+    [Arguments]    ${items}    ${rows}
     Make Connection    ${dbname}
+
+    # set dateformat
+    ${invoiceDate}=    Convert Date    ${items}[4]    date_format=%d.%m.%Y    result_format=%Y-%m-%d
+    ${dueDate}=    Convert Date    ${items}[0]    date_format=%d.%m.%Y    result_format=%Y-%m-%d
+
+    # invoice status variable
+    ${InvoiceStatus}=    Set Variable    0
+    ${InvoiceComment}=    Set Variable    All ok
+    
+    #validate reference number
+    ${refStatus}=    Is Reference Number Correct    ${items}[2]
+
+    IF    not ${refStatus}
+        ${InvoiceStatus}=    Set Variable    1
+        ${InvoiceComment}=    Set Variable    Reference number error   
+    END
+
+    #validate IBAN number
+    ${ibanStatus}=    Check IBAN    ${items}[6]
+
+    IF    not ${ibanStatus}
+        ${InvoiceStatus}=    Set Variable    2
+        ${InvoiceComment}=    Set Variable    IBAN number error   
+    END
+
+    # validate invoice amounts
+    ${sumStatus}=    Check Amounts From Invoice    ${items}[9]    ${rows}   
+    IF    not ${sumStatus}
+        ${InvoiceStatus}=    Set Variable    3
+        ${InvoiceComment}=    Set Variable    Amount difference   
+    END
+
     #TODO: laskun päivä, summatiedot + status ja kommentit
-    ${insertStmt}=    Set Variable    insert into InvoiceHeader (invoicenumber, companyname, companycode, referencenumber, invoicedate, duedate, bankaccountnumber, amounttexctvat, vat, totalamount, vomments, InvoiceStatus_id) values ('${items}[0]', '${items}[1]', '${items}[5]', '${items}[2]', '2000-01-01', '2000-01-01', '${items}[6]', 0, 0, 0, 0, '');
+    ${insertStmt}=    Set Variable    insert into InvoiceHeader (invoicenumber, companyname, companycode, referencenumber, invoicedate, duedate, bankaccountnumber, amounttexctvat, vat, totalamount, comments, InvoiceStatus_id) values ('${items}[0]', '${items}[1]', '${items}[5]', '${items}[2]', '${invoiceDate}', '${duedate}', '${items}[6]', '${items}[7]', '${items}[8]', '${items}[9]' '${InvoiceComment}', '${InvoiceStatus}');
     Execute Sql String    ${insertStmt}
 
 *** Keywords ***
 Add Row Data to List
     [Arguments]    ${items}
 
-
     #Tarkista järjestys items numeroista eli tietokannan järjestys missä ovat
     @{AddInvoiceRowData}=    Create List
-    
     
     Append To List    ${AddInvoiceRowData}    ${items}[8]
     Append To List    ${AddInvoiceRowData}    ${items}[0]
@@ -66,6 +95,12 @@ Add Row Data to List
 Check Amounts From Invoice
     [Arguments]     ${totalSumFromHeader}   ${totalSumFromRows}
     ${status}=  Set Variable    ${False}
+    ${totalAmountFromRows}=    Evaluate    0
+
+    FOR    ${element}    IN    @{totalSumFromRows}
+        #Log    ${element}
+        ${totalAmountFromRows}=    Evaluate    ${totalAmountFromRows}+${element}[8]
+    END
     ${totalSumFromHeader}=  Convert To Number    ${totalSumFromHeader}
     ${totalSumFromRows}=    Convert To Number   ${totalSumFromRows}
 
@@ -92,25 +127,21 @@ Check IBAN
 
 *** Test Cases ***
 Read CSV file to list
-#Connect To Database    pymysql    ${dbname}    ${dbuser}    ${dbpass}    ${dbhost}    ${dbport}
 
     Make Connection    ${dbname}
-#${headers}    Get file     ${PATH}InvoiceHeaderData.csv
-#${rows}    Get file     ${PATH}InvoiceRowData.csv
-
-#${rows} Split String 
 
     #luetaan csv muuttujiin
     ${outputHeader}=    Get File    ${PATH}InvoiceHeaderData.csv
     ${outputRows}=    Get File    ${PATH}InvoiceRowData.csv
-    #Log    ${outputRows}
+
+    Log    ${outputHeader}
+    Log    ${outputRows}
 
     #yksittäinen käsittely
     @{headers}=    Split String    ${outputHeader}    \n
     @{rows}=    Split String    ${outputRows}    \n
-    #Log    ${rows}
 
-    #poistetaan otsikko 2 riviä
+    #poistetaan otsikko ja tyhjä rivi
     #saga
     ${length}=    Get length    ${headers}
     ${length}=    Evaluate    ${length}-1
@@ -119,8 +150,6 @@ Read CSV file to list
     #headers remove
     Remove from list    ${headers}    ${length}
     Remove from list    ${headers}    ${index}
-
-    #Log    ${headers}
 
     ${length}=    Get length    ${rows}
     ${length}=    Evaluate    ${length}-1
@@ -132,19 +161,12 @@ Read CSV file to list
     Set Global Variable    ${headers}
     Set Global Variable    ${rows}
 
-    #ylimääräiset?
-
-    #@{headerRow}=    Split String    ${headers}[0]    ;
-
-    #Log    ${headerRow}
-    #${invoiceNumber}=    Set Variable    ${headerRow}[0]
-
 *** Test Cases***
 Loop all invoicerows
-    FOR    ${element}    IN    @    {rows}
-
+    FOR    ${element}    IN    @{rows}
         Log    ${element}
 
+        #jaetaan rivin data omiksi elementeiksi
         @{items}=    Split String    ${element}    ;
 
         #käsiteltävän rivin laskunumero
@@ -170,27 +192,34 @@ Loop all invoicerows
                 #päivittää laskun numeron
                 ${InvoiceNumber}=    Set Variable    ${rowInvoiceNumber}
                 Set Global Variable    ${InvoiceNumber}
-                #lisää käsiteltävän laskun tiedot listaan
 
+                #lisää käsiteltävän laskun tiedot listaan
                 Add Row Data to List    ${items}
             ELSE
                 Log    Lasku vaihtuu, pitää käsitellä myös otsikkodata
 
                 #Etsi laskun otsikko rivi
-                FOR    ${headerElement}    IN    @    {headers}
+                FOR    ${headerElement}    IN    @{headers}
                     ${headerItems}=    Split String    ${headerElement}    ;
 
                     IF    '${headerItems}[0]' == '${InvoiceNumber}'
                         Log    Laksu löytyi
 
-                        #validointi
-
                         #Syötä laskun otsikkorivi tietokantaan
-                        Add Invoice Header to DB    ${headerItems}
+                        Add Invoice Header to DB    ${headerItems}    ${ListToDB}
                         
                         #syötä laskun rivit tietokantaan
                         FOR    ${rowElement}    IN    @{ListToDB}
                             Add Invoice Row To DB    ${rowElement}
+
+                             #valmista prosessi seuraavaan laskuun
+                            ${ListToDB}    Create List
+                            Set Global Variable    ${ListToDB}
+                            ${InvoiceNumber}=    Set Variable    ${rowInvoiceNumber}
+                            Set Global Variable    ${InvoiceNumber}
+
+                            #lisää käsiteltävän laskun tiedot listaan
+                            Add Row Data to List    ${items}
                             
                         END
                         
@@ -199,18 +228,7 @@ Loop all invoicerows
                 END
               
 
-              
-
-              
-
-                #valmista prosessi seuraavaan laskuun
-                ${ListToDB}    Create List
-                Set Global Variable    ${ListToDB}
-                ${InvoiceNumber}=    Set Variable    ${rowInvoiceNumber}
-                Set Global Variable    ${InvoiceNumber}
-
-                #lisää käsiteltävän laskun tiedot listaan
-                Add Row Data to List    ${items}
+                
             END
         END
     END
@@ -224,13 +242,11 @@ Loop all invoicerows
         FOR    ${headerElement}    IN    @{headers}
             ${headerItems}=    Split String    ${headerElement}    ;
 
-            IF    '${headerItems}[0] == '${InvoiceNumber}'
+            IF    '${headerItems}[3] == '${InvoiceNumber}'
                 Log    Laksu löytyi
 
-                #validointi
-
                 #Syötä laskun otsikkorivi tietokantaan
-                Add Invoice Header to DB    ${headerItems}
+                Add Invoice Header to DB    ${headerItems}    ${ListToDB}
                 
                 #syötä laskun rivit tietokantaan
                 FOR    ${rowElement}    IN    @{ListToDB}
@@ -246,22 +262,3 @@ Loop all invoicerows
    
 
 
-*** Test Cases***
-validointitesti
-    ${referenceResult}=     Is Reference Number Correct     893479835
-    
-    IF  not ${referenceResult}
-        Log to console  Viite virhe
-    END
-
-    ${ibanResult}=     Check IBAN     FI23 2333 4334 3431 34
-    
-    IF  not ${ibanResult}
-        Log to console  IBAN virhe
-    END
-
-    ${sumResult}=    Check Amounts From Invoice     2332,22    2332,23
-    
-    IF  not ${sumResult}
-        Log to console  Summa virhe
-    END

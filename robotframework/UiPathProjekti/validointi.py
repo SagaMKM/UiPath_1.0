@@ -23,7 +23,7 @@ def isReferenceNumberCorrect(referencenumber):
         else:
             product = 1
             totalAmount = totalAmount + (product * int(listed.pop()))
-    print(totalAmount)
+    #print(totalAmount)
     result = (10 - (totalAmount % 10)) % 10
 
     if (result == int (checknumber)):
@@ -36,6 +36,6 @@ def isEqual(totalHeaderSum, totalRowSum, maxDifference):
     return False
 
     if _name_=="_main":
-        ref = '893479835'
+        ref = '1531439'
         result = isReferenceNumberCorrect(ref)
     
