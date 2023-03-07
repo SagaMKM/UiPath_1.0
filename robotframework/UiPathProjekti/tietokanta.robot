@@ -172,11 +172,9 @@ Loop all invoicerows
         #käsiteltävän rivin laskunumero
         ${rowInvoiceNumber}=    Set Variable    ${items}[7]
 
-
         #Nämä muuttujat pitää tarkistaa videossa invoicenumber ja rowinvoicenumber
         Log    ${InvoiceNumber}
         Log    ${rowInvoiceNumber} 
-
 
         #vaihtuuko laskunumero
         IF    '${rowInvoiceNumber}' == '${InvoiceNumber}'
@@ -219,8 +217,7 @@ Loop all invoicerows
                             Set Global Variable    ${InvoiceNumber}
 
                             #lisää käsiteltävän laskun tiedot listaan
-                            Add Row Data to List    ${items}
-                            
+                            Add Row Data to List    ${items}                          
                         END
                         
                     END
@@ -242,7 +239,7 @@ Loop all invoicerows
         FOR    ${headerElement}    IN    @{headers}
             ${headerItems}=    Split String    ${headerElement}    ;
 
-            IF    '${headerItems}[3] == '${InvoiceNumber}'
+            IF    '${headerItems}[1]' == '${InvoiceNumber}'
                 Log    Laksu löytyi
 
                 #Syötä laskun otsikkorivi tietokantaan
@@ -258,7 +255,3 @@ Loop all invoicerows
             
         END
     END
-
-   
-
-

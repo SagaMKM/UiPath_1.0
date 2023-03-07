@@ -21411,15 +21411,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sagam\\.nuget\\packages\\": {}
+    "C:\\Users\\niemi\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Projektityö",
       "projectName": "Projektityö",
-      "projectPath": "C:\\Users\\sagam\\OneDrive\\Tiedostot\\GitHub\\UiPath3\\.local",
-      "packagesPath": "C:\\Users\\sagam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sagam\\OneDrive\\Tiedostot\\GitHub\\UiPath3\\.local"
+      "projectPath": "C:\\Users\\niemi\\Desktop\\HAMK\\HAMK21_22\\Ohjelmointi\\webservices\\UiPath3\\.local",
+      "packagesPath": "C:\\Users\\niemi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\niemi\\Desktop\\HAMK\\HAMK21_22\\Ohjelmointi\\webservices\\UiPath3\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -21455,7 +21455,7 @@
             "version": "[22.10.4, 22.10.4]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\sagam\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\niemi\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
