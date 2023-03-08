@@ -28,7 +28,9 @@ Make Connection
 Add Invoice Row To DB
     [Arguments]    ${items}
     Make Connection    ${dbname}
-    ${insertStmt}=    Set Variable    insert into InvoiceRow (rownumber, description, quantity, unit, unitprice, vatpercent, vat, total, InvoiceHeader_invoicenumber) values ('${items}[0]', '${items}[1]', '${items}[2]', '${items}[3]', '${items}[4]', '${items}[5]', '${items}[6]', '${items}[8]', '${items}[7]');
+    Log To Console    ${InvoiceNumber}
+    #${insertStmt}=    Set Variable    insert into InvoiceRow (rownumber, description, quantity, unit, unitprice, vatpercent, vat, total, InvoiceHeader_invoicenumber) values ('${items}[0]', '${items}[1]', '${items}[2]', '${items}[3]', '${items}[4]', '${items}[5]', '${items}[6]', '${items}[8]', '${items}[7]');
+    ${insertStmt}=    Set Variable    insert into InvoiceRow (rownumber, description, quantity, unit, unitprice, vatpercent, vat, total, InvoiceHeader_invoicenumber) values ('${items}[0]', '${items}[1]', '${items}[2]', '${items}[3]', '${items}[4]', '${items}[5]', '${items}[6]', '${items}[7]', '${InvoiceNumber}');
     Execute Sql String    ${insertStmt}
 
 
@@ -45,8 +47,9 @@ Add Invoice Header to DB
     ${InvoiceStatus}=    Set Variable    0
     ${InvoiceComment}=    Set Variable    All ok
     
+    #Log To Console    ${items}[3]
     #validate reference number
-    ${refStatus}=    Is Reference Number Correct    ${items}[2]
+    ${refStatus}=    Is Reference Number Correct    ${items}[3]
 
     IF    not ${refStatus}
         ${InvoiceStatus}=    Set Variable    1
@@ -67,11 +70,12 @@ Add Invoice Header to DB
         ${InvoiceStatus}=    Set Variable    3
         ${InvoiceComment}=    Set Variable    Amount difference   
     END
-
+    Log To Console    ${items}[9]
     #TODO: laskun päivä, summatiedot + status ja kommentit
-    ${insertStmt}=    Set Variable    insert into InvoiceHeader (invoicenumber, companyname, companycode, referencenumber, invoicedate, duedate, bankaccountnumber, amounttexctvat, vat, totalamount, comments, InvoiceStatus_id) values ('${items}[0]', '${items}[1]', '${items}[5]', '${items}[2]', '${invoiceDate}', '${duedate}', '${items}[6]', '${items}[7]', '${items}[8]', '${items}[9]' '${InvoiceComment}', '${InvoiceStatus}');
+    #${insertStmt}=    Set Variable    insert into InvoiceHeader (invoicenumber, companyname, companycode, referencenumber, invoicedate, duedate, bankaccountnumber, amounttextvat, vat, totalamount, comments, InvoiceStatus_id) values ('${items}[0]', '${items}[1]', '${items}[5]', '${items}[2]', '${invoiceDate}', '${dueDate}', '${items}[6]', '${items}[7]', '${items}[8]', '${items}[9]' '${InvoiceComment}', '${InvoiceStatus}');
+    ${insertStmt}=    Set Variable    insert into InvoiceHeader (invoicenumber, companyname, companycode, referencenumber, invoicedate, duedate, bankaccountnumber, amounttextvat, vat, totalamount, comments, InvoiceStatus_id) values ('${InvoiceNumber}', '${items}[2]', '${items}[5]', '${items}[3]', '${invoiceDate}', '${dueDate}', '${items}[6]', '${items}[7]', '${items}[8]', '${items}[9]', '${InvoiceComment}', '${InvoiceStatus}');
     Execute Sql String    ${insertStmt}
-
+    
 *** Keywords ***
 Add Row Data to List
     [Arguments]    ${items}
@@ -98,15 +102,15 @@ Check Amounts From Invoice
     ${totalAmountFromRows}=    Evaluate    0
 
     FOR    ${element}    IN    @{totalSumFromRows}
-        #Log    ${element}
-        ${totalAmountFromRows}=    Evaluate    ${totalAmountFromRows}+${element}[8]
+        Log To Console    ${element}
+        ${totalAmountFromRows}=    Evaluate    ${totalAmountFromRows}+${element}[7]
     END
     ${totalSumFromHeader}=  Convert To Number    ${totalSumFromHeader}
-    ${totalSumFromRows}=    Convert To Number   ${totalSumFromRows}
+    ${totalAmountFromRows}=    Convert To Number   ${totalAmountFromRows}
 
-    ${diff}=    Convert To Number   0,01
+    ${diff}=    Convert To Number   0.01
 
-    ${status}= Is Equal     ${totalSumFromHeader}   ${totalSumFromRows}     ${diff}
+    ${status}=    Is Equal     ${totalSumFromHeader}   ${totalAmountFromRows}     ${diff}
 
     [Return]    ${status}
 
@@ -200,30 +204,32 @@ Loop all invoicerows
                 FOR    ${headerElement}    IN    @{headers}
                     ${headerItems}=    Split String    ${headerElement}    ;
 
-                    IF    '${headerItems}[0]' == '${InvoiceNumber}'
+                    IF    '${headerItems}[1]' == '${InvoiceNumber}'
                         Log    Laksu löytyi
 
+                        Log To Console    ${headerItems}
                         #Syötä laskun otsikkorivi tietokantaan
                         Add Invoice Header to DB    ${headerItems}    ${ListToDB}
                         
                         #syötä laskun rivit tietokantaan
                         FOR    ${rowElement}    IN    @{ListToDB}
+                            Log To Console    ${InvoiceNumber}
                             Add Invoice Row To DB    ${rowElement}
 
-                             #valmista prosessi seuraavaan laskuun
-                            ${ListToDB}    Create List
-                            Set Global Variable    ${ListToDB}
-                            ${InvoiceNumber}=    Set Variable    ${rowInvoiceNumber}
-                            Set Global Variable    ${InvoiceNumber}
-
-                            #lisää käsiteltävän laskun tiedot listaan
-                            Add Row Data to List    ${items}                          
+                                                    
                         END
-                        
+                         
                     END
                     
                 END
-              
+                #valmista prosessi seuraavaan laskuun
+                ${ListToDB}    Create List
+                Set Global Variable    ${ListToDB}
+                ${InvoiceNumber}=    Set Variable    ${rowInvoiceNumber}
+                Set Global Variable    ${InvoiceNumber}
+
+                #lisää käsiteltävän laskun tiedot listaan
+                Add Row Data to List    ${items}  
 
                 
             END
@@ -241,6 +247,7 @@ Loop all invoicerows
 
             IF    '${headerItems}[1]' == '${InvoiceNumber}'
                 Log    Laksu löytyi
+                #Log To Console    ${headerItems}
 
                 #Syötä laskun otsikkorivi tietokantaan
                 Add Invoice Header to DB    ${headerItems}    ${ListToDB}
