@@ -1,1 +1,471 @@
-<mxfile host="app.diagrams.net" modified="2023-02-21T07:19:39.183Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="iwgLdUPFC6AWsNmS_0YE" version="20.8.10" type="github" pages="2"><diagram id="pBzNos0Q74Z3izpr5-M8" name="Page-1">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</diagram><diagram id="9NsjQAqZ63PPH62hromS" name="Page-2">7Vrbcts2EP0azbQP9vAmkXq0ZbtJ6040ddrEfcnAIkTCIgENCOqSr8+CBMWrZEaSRbn1ZMYhVgsCPDhnF7eeOQpXv3E09/9kLg56huaueuZNzzB0y7TgP2lZpxbbHKYGjxNXOeWGB/IdK6OmrDFxcVRyFIwFgszLxgmjFE9EyYY4Z8uy25QF5VbnyMM1w8MEBXXrF+IKP7U6hp3bP2Di+VnL+kB9X4gyZ/UlkY9ctiyYzNueOeKMifQpXI1wIMHLcEnr3W35ddMxjqloU8GZxd7j58j598vFhf/7/fdP1zNxod6yQEGsPvhvMpY9N7QxZxGOIqJ6L9YZJAKvoMFrX4QBGHR4jARnMzxiAeNgoYyC5/WUBEHFhALiUShOoMsY7NcLzAUBsK/UDyFxXdnM9dInAj/M0US2uQRqgY2zmLpYfo0GJdVxeAFebUVE3+AMBMUsxIKvwUVVyEZmXS4u83HWM5tfGGNT2ZCilrd5cY4+PKgB+InBMGqDUcMe3gLM34ZQYUhQNE/lMCUridkr4OXU8XIa4HJeCy69X4fHBfGqIuPCZx6jKLjNrRUS5T73jM0VdM9YiLWKRCgWrAxs2qZsaDeK0C8W8wne8QGmimeIe1js8LOaR4XjAAmyKPfj6ChbDSR8EeU9cMUrIr4Wnh/lEF32VelmpUYsKayzAoUv/FosFGrJYl4tKZXqjTEnAJGMQ4lxEvNFQox6RHPxFMWBSGq6VzKr5DENLHdEQlqISqdlxxbRnoYeZi1m3cfMRYjKnI8E/HsKoPuGNmM+6A7KATCkyqhclfrLoe0IkUy3XgxlG5fTxLJBF7Es01yus8fCLy9pLpfZY0llzZo7ojKslsrodxo3G4SBRSqM8c2d7D/BLosEk+pAwSz20QyHBAyRQGenEL17idjvEmktkX5LiQy6lEj/ZyQyQKFkOX2K5glUgyQfP3F48kSasQn15MIrjoWIn5PXnJmIziDPOJ2IaM952hEFMWgpCLtLQQxqgrgVERG9kdm7stK/NNnrCOeIrifMhZmU9svjhYgpjaNfz47vZvd8H74njdYasVtqxOlSI3ZNI2PEI0LlnKmoDJqkglljGvBZ+BRHJ5GEaVYkYTdIQmuQxMZ4/G0mvYbIuyZ2cr2FJoZdasJpzBuSUGARschmUqLzDGHqZTlYw64zhLHP/tb/VQ3DlmrQtWYWnEYOw21y4GRBBIpYtjl1dnIYaF3LIetQAbw/0pknTEQFlnt35w+j3TmMZgMH6ydp5x9oNN2qLNkcZ5/N9SPGIN1oG4QOPTdJql5xjtYFhzmDuWZUePNYGnIuVk/JdM2yK3RKX5mTa9O3A3YbG2S7hmrpyrFL3hVY1/o45wKIp9ll4lnGXqc6XRDv0E21vXjnlGk37FduA+x2t1KxvC5JMwALJP1EZwwsAYmKmxzSgqJZ/Ix65l09u5xw+abbFVibMstpl29mfQX8hqXe3Y6g3vaA9eDJ7H55ZFA5ohzsFnTV37a03qsr2mxYeX58c9Mc/Q1w0DiQg4ctCuqn/NsCd/VYpnpwA2sH/KycO47t1a05R+88tuv1U+PP8sIEpahXuE8Bz6OHf3rmVfdHXGZlujvsfEPHqt9pdMU3QheMTPAHjFzM6zQFj4+px19sWQM1vQ2U3f80yiBGPppLv3DlySuwl9OALSc+4uISUcpgxAij35IreeqSY4CnsskkAWB+u8AyDxxtQLKZ3GbDuT4e/ZNy2qoHj/8UwHrDjv6xEIZifkE4Tdr5NWvz9gc=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-03-09T14:28:18.561Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="GHESC4C5Adez39_L60AE" version="21.0.2" type="github" pages="3">
+  <diagram id="pBzNos0Q74Z3izpr5-M8" name="Projekti">
+    <mxGraphModel dx="1434" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-10" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="360" width="700" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-6" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="190" width="700" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Nygt5uLxB3b8vqxISnZd-7" value="Skannattut paperilaskut tallennetaan &quot;Open&quot; hakemistoon." style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="225" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Nygt5uLxB3b8vqxISnZd-10" value="UI Path poimii PDF tiedostoista oleelliset tiedot CSV muotoon." style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="364" y="390" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Nygt5uLxB3b8vqxISnZd-11" value="CSV tietojen prosessointi. &quot;Open&quot; hakemistossa" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="630" y="205" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-1" value="Minioppariprojekti" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="160" width="760" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-2" value="Tiedostot" style="rounded=0;whiteSpace=wrap;html=1;direction=north;" parent="1" vertex="1">
+          <mxGeometry x="40" y="190" width="60" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-3" value="UiPath" style="rounded=0;whiteSpace=wrap;html=1;direction=south;" parent="1" vertex="1">
+          <mxGeometry x="40" y="360" width="60" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-4" value="Robot Framework" style="rounded=0;whiteSpace=wrap;html=1;direction=south;" parent="1" vertex="1">
+          <mxGeometry x="40" y="520" width="60" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-5" value="Tietokanta" style="rounded=0;whiteSpace=wrap;html=1;direction=south;" parent="1" vertex="1">
+          <mxGeometry x="40" y="720" width="60" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8k0k6PJcJcKbX0zr3Bi8-7" target="Nygt5uLxB3b8vqxISnZd-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-7" value="Laskut" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="120" y="245" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-11" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="520" width="700" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-12" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="720" width="700" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Nygt5uLxB3b8vqxISnZd-9" value="Luodaan MySQL tietokanta ostolaskuille.&lt;br&gt;Status tiedot myös." style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="490" y="750" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-14" value="Laskujen&lt;br&gt;käsittely" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="240" y="390" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Nygt5uLxB3b8vqxISnZd-7" target="8k0k6PJcJcKbX0zr3Bi8-14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="460" as="sourcePoint" />
+            <mxPoint x="440" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8k0k6PJcJcKbX0zr3Bi8-14" target="Nygt5uLxB3b8vqxISnZd-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="460" as="sourcePoint" />
+            <mxPoint x="440" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-17" value="Laskut &quot;Käsiteltyjen&quot; hakemistossa" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="450" y="245" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.372;exitY=0.014;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Nygt5uLxB3b8vqxISnZd-10" target="Nygt5uLxB3b8vqxISnZd-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="389" y="270" as="sourcePoint" />
+            <mxPoint x="439" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="400" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-24" value="Tallennetaan laskut &quot;Finished&quot; hakemistoon" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="490" y="390" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Nygt5uLxB3b8vqxISnZd-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="490" y="440" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" target="8k0k6PJcJcKbX0zr3Bi8-17" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="525" y="390" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-27" value="Lukea laskun data muuttujiin" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="240" y="570" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-29" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.4;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.6;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="Nygt5uLxB3b8vqxISnZd-11" target="8k0k6PJcJcKbX0zr3Bi8-27" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="310" as="sourcePoint" />
+            <mxPoint x="440" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="690" y="540" />
+              <mxPoint x="280" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nygt5uLxB3b8vqxISnZd-8" value="Laskuista tarkistetaan IBAN numero, viitenumero, summat ja kokonaissumma." style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="364" y="570" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="8k0k6PJcJcKbX0zr3Bi8-27" target="Nygt5uLxB3b8vqxISnZd-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="580" as="sourcePoint" />
+            <mxPoint x="440" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-33" value="Lisää laskut tietokantaan" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;shadow=0;" parent="1" vertex="1">
+          <mxGeometry x="490" y="570" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Nygt5uLxB3b8vqxISnZd-8" target="8k0k6PJcJcKbX0zr3Bi8-33" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="770" as="sourcePoint" />
+            <mxPoint x="440" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8k0k6PJcJcKbX0zr3Bi8-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.629;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="8k0k6PJcJcKbX0zr3Bi8-11" target="Nygt5uLxB3b8vqxISnZd-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="770" as="sourcePoint" />
+            <mxPoint x="440" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="9NsjQAqZ63PPH62hromS" name="UiPath">
+    <mxGraphModel dx="1434" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-1" value="UiPath Prosessi" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8kugYTs8ZW--hJLzOBkt-2" target="8kugYTs8ZW--hJLzOBkt-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="20" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8kugYTs8ZW--hJLzOBkt-3" target="8kugYTs8ZW--hJLzOBkt-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-42" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;strokeColor=default;endArrow=none;endFill=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-3" target="8kugYTs8ZW--hJLzOBkt-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-3" value="Luodaan datatablet kohdedatalle" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="80" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-4" target="8kugYTs8ZW--hJLzOBkt-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-4" value="Luetaan PDF tiedostot alkuhakemistosta" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="180" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-5" target="8kugYTs8ZW--hJLzOBkt-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-12" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;curved=1;" edge="1" parent="1" source="8kugYTs8ZW--hJLzOBkt-5" target="2AOorNoscCHdVGtUdLYh-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-5" value="Luetaan PDF tiedostot&amp;nbsp;&lt;br&gt;string muuttujaan" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="280" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-6" target="8kugYTs8ZW--hJLzOBkt-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-6" value="Etsitään companycode (Y-tunnus)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="380" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-7" target="8kugYTs8ZW--hJLzOBkt-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-7" value="Parsinta companycoden mukaan" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="370" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-8" target="8kugYTs8ZW--hJLzOBkt-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-11" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=1;endArrow=none;endFill=0;" edge="1" parent="1" source="8kugYTs8ZW--hJLzOBkt-8" target="2AOorNoscCHdVGtUdLYh-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-8" value="Etsi halutut tiedot" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="490" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-9" target="8kugYTs8ZW--hJLzOBkt-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-17" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;curved=1;endArrow=none;endFill=0;" edge="1" parent="1" source="8kugYTs8ZW--hJLzOBkt-9" target="2AOorNoscCHdVGtUdLYh-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-9" value="Etsi rivitason data" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="600" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8kugYTs8ZW--hJLzOBkt-10" target="8kugYTs8ZW--hJLzOBkt-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-16" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;endArrow=none;endFill=0;" edge="1" parent="1" source="8kugYTs8ZW--hJLzOBkt-10" target="2AOorNoscCHdVGtUdLYh-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-10" value="Käsittele rivitason data" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="700" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-39" value="Ei" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.014;entryY=0.588;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-12" target="8kugYTs8ZW--hJLzOBkt-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="1047" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-40" value="Kyllä" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.007;entryY=0.425;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-12" target="8kugYTs8ZW--hJLzOBkt-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="950" />
+              <mxPoint x="80" y="414" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-12" value="Onko lisää laskuja?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="900" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-37" value="Kyllä" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-13" target="8kugYTs8ZW--hJLzOBkt-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="860" />
+              <mxPoint x="260" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-38" value="EI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8kugYTs8ZW--hJLzOBkt-13" target="8kugYTs8ZW--hJLzOBkt-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-13" value="Onko lisää&lt;br&gt;&amp;nbsp;rivejä?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="330" y="810" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-14" value="Tallenna datatable CSV-tiedostoksi" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="324" y="1000" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-41" value="dt_invoiceHeader&lt;br&gt;dt_InvoiceRow" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="364" y="40" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8kugYTs8ZW--hJLzOBkt-43" value="Switch&lt;br&gt;case: Y-tunnus" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="464" y="280" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-5" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.93;exitY=0.41;exitDx=0;exitDy=0;entryX=-0.06;entryY=0.72;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;strokeColor=default;endArrow=none;endFill=0;exitPerimeter=0;" edge="1" parent="1" source="8kugYTs8ZW--hJLzOBkt-7" target="8kugYTs8ZW--hJLzOBkt-43">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="420" as="sourcePoint" />
+            <mxPoint x="564" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-6" value="Read PDF text" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="369" y="250" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-8" value="﻿DueDate&lt;br&gt;InvoiceNumber&lt;br&gt;CompanyName&lt;br&gt;ReferenceNumber&lt;br&gt;InvoiceDate&lt;br&gt;CompanyCode&lt;br&gt;BankAccountNumber&lt;br&gt;AmountExcVat&lt;br&gt;VatAmount&lt;br&gt;TotalAmount" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="260" width="60" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-13" value="﻿Discription&lt;br&gt;Quantity&lt;br&gt;Unit&lt;br&gt;UnitPrice&lt;br&gt;VatPercent&lt;br&gt;Vat&lt;br&gt;TotalAmount&lt;br&gt;InvoiceNumber&lt;br&gt;RowNumber" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="660" width="60" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="2AOorNoscCHdVGtUdLYh-15" value="Rivitietojenkohta:&lt;br&gt;Index of&lt;br&gt;Jaa löydetyt rivit:&lt;br&gt;split" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="500" y="560" width="50" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Ua_34QhPQrsQ1t4Go3JB" name="RF">
+    <mxGraphModel dx="1434" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-1" value="RobotFramework prosessi" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="10" y="15" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-2" value="Luodaan lista, johon tulee tietokantaan tulevat rivit" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="60" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-3" value="Laskunumeroille apumuuttujat" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="160" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-4" value="Luetaan CSV:stä rivitiedot muuttujaan" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="235" y="160" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-5" value="Splitataan rivitiedot listamuuttujiin" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="235" y="260" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-6" value="Onko laskunumero apumuuttujassa" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="360" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-7" value="Onko tietokantalistassa rivrjä" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="360" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-8" value="Etsiään header CSV:stä laksun otsikkotiedot" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="380" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-9" value="Verrataan summatiedot" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-10" value="Lisää rowdata luotuun tietokantalistsaan" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="235" y="510" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-11" value="Tallenna laskunumero apumuuttujaan" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="510" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-12" value="Tutki IBAN" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="570" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-13" value="Tutki viite" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="670" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-14" value="Aseta liput" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="770" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-15" value="Onko vielä rivjä" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="245" y="630" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-16" value="Tallenna tietokantaan" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="870" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-17" value="Tyhjennä tietokantalista" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="960" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-2" target="9Pvfn-pVJo45HQ1IfGmR-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-3" target="9Pvfn-pVJo45HQ1IfGmR-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="180" as="sourcePoint" />
+            <mxPoint x="190" y="230" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-4" target="9Pvfn-pVJo45HQ1IfGmR-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-5" target="9Pvfn-pVJo45HQ1IfGmR-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-27" value="Ei" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-6" target="9Pvfn-pVJo45HQ1IfGmR-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-28" value="Kyllä" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-7" target="9Pvfn-pVJo45HQ1IfGmR-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-29" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-8" target="9Pvfn-pVJo45HQ1IfGmR-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="520" as="sourcePoint" />
+            <mxPoint x="450" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-30" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-9" target="9Pvfn-pVJo45HQ1IfGmR-12" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="520" as="sourcePoint" />
+            <mxPoint x="450" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-31" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-12" target="9Pvfn-pVJo45HQ1IfGmR-13" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="520" as="sourcePoint" />
+            <mxPoint x="450" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-32" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-13" target="9Pvfn-pVJo45HQ1IfGmR-14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="820" as="sourcePoint" />
+            <mxPoint x="450" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-33" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-14" target="9Pvfn-pVJo45HQ1IfGmR-16" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="820" as="sourcePoint" />
+            <mxPoint x="450" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-16" target="9Pvfn-pVJo45HQ1IfGmR-17" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="820" as="sourcePoint" />
+            <mxPoint x="450" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-35" value="Kyllä" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-6" target="9Pvfn-pVJo45HQ1IfGmR-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="620" as="sourcePoint" />
+            <mxPoint x="450" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-36" value="Ei" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-7" target="9Pvfn-pVJo45HQ1IfGmR-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="620" as="sourcePoint" />
+            <mxPoint x="450" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-11" target="9Pvfn-pVJo45HQ1IfGmR-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="620" as="sourcePoint" />
+            <mxPoint x="450" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-10" target="9Pvfn-pVJo45HQ1IfGmR-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="620" as="sourcePoint" />
+            <mxPoint x="450" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-39" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-17" target="9Pvfn-pVJo45HQ1IfGmR-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="620" as="sourcePoint" />
+            <mxPoint x="450" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="990" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-40" value="Siirry seuraavaan&lt;br&gt;laskuun" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="9Pvfn-pVJo45HQ1IfGmR-39" connectable="0" vertex="1">
+          <mxGeometry x="0.2851" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-41" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-15" target="9Pvfn-pVJo45HQ1IfGmR-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="820" as="sourcePoint" />
+            <mxPoint x="450" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="305" y="1040" />
+              <mxPoint x="810" y="1040" />
+              <mxPoint x="810" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-42" value="Ei" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="9Pvfn-pVJo45HQ1IfGmR-41" connectable="0" vertex="1">
+          <mxGeometry x="-0.2555" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Pvfn-pVJo45HQ1IfGmR-43" value="Kyllä" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9Pvfn-pVJo45HQ1IfGmR-15" target="9Pvfn-pVJo45HQ1IfGmR-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="690" as="sourcePoint" />
+            <mxPoint x="450" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="675" />
+              <mxPoint x="180" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
